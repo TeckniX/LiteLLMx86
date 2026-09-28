@@ -9,7 +9,13 @@ llama-server -m $MODEL_FILE \
   --host ${HOST} \
   --port ${PORT} \
   -t 8 \
-  -c 2048 \
+  -c 4096 \
+  -ub 512 \
+  -b 512 \
+  --cache-type-k q4_0 \
+  --cache-type-v q4_0 \
+  --mlock \
+  --prio 2 \
   --chat-template minicpm &
 
 # Wait for llama-server to be ready
