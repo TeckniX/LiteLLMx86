@@ -1,0 +1,13 @@
+model_list:
+  # Local model served by llama-server on port 8080
+  - model_name: minicpm5-1b
+    litellm_params:
+      model: openai/MiniCPM5-1B  # Provider prefix + exact model identifier
+      api_base: http://localhost:8080/v1  # llama-server endpoint
+      api_key: "NONE"
+
+router_settings:
+  routing_strategy: usage-based-routing-v2
+
+litellm_settings:
+  drop_params: true  # Drops unsupported OpenAI params automatically

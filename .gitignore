@@ -1,0 +1,6 @@
+# graft's local graph cache — regenerable, not committed (run `graft build`).
+/_graft/
+
+# Ignore downloaded models
+# hf download openbmb/MiniCPM5-2B-GGUF MiniCPM5-2B-Q4_K_M.gguf --local-dir models/
+models/**
